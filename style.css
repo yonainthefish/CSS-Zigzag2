@@ -1,0 +1,309 @@
+/* reset */
+:root {
+    font-family: 'Montserrat', sans-serif;
+}
+
+ul,li{
+    list-style: none;
+}
+
+body,div,section,
+h1,h2,h3,h4,ul,li,p{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+
+
+
+
+/* 공통 컨텐츠 해드 시작 */
+.section_salmon{
+    background: seashell;
+    color: salmon;
+}
+.section_purple{
+    background: #673399;
+    color: white;
+}
+
+.l-containor{
+    /* border: 1px solid red; */
+    width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.l-containor .top-text{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.l-containor .top-text h1{
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 500;
+}
+
+
+/* 살몬 파트 */
+
+.section_salmon .top-text span{
+    box-shadow: inset 0 -20px 0 white;
+}
+
+.top-text .head-info{
+    width: 400px;
+    font-size: 14px;
+    line-height: 20px;
+    position: absolute;
+    top: 20%;
+    left: 38%;
+    color: #bd8fe8;
+}
+
+.section_salmon .top-text .add-button{
+    border:0px;
+    border-bottom: 3px solid rgb(139, 38, 1);
+    background-color: orangered ;
+    color: white;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* 살몬 중간 카드 컨텐츠 시작 */
+
+.second-cardbox{    
+    display: grid;
+    width: 1080px;
+    grid-template-columns:  1fr 1fr 1fr;
+    gap: 24px;
+}
+
+.card-vertical{
+    background-color: white;
+    display: flex;
+    flex-direction: column;    
+    /* overflow: hidden; */
+    margin-bottom: 100px;
+    position: relative;    
+}
+
+.card-vertical:first-child:before{
+    content: url(./images/badge.png);
+    position: absolute;
+    top: -10px;
+    left: -10px;
+}
+
+.card-vertical .second-imgcard img{
+    width: 100%;    
+}
+
+.card-text{
+    padding: 24px;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    color: black;
+    overflow: hidden;
+}
+
+.skill-box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+    gap: 5px;
+}
+
+.skill-box .lang-pupple{
+    font-size: 12px;
+    background-color: #f1e0f8;
+    color: #673399;
+    font-weight: bold;
+    padding: 3px 5px;
+    border-radius: 5px;
+
+}
+
+.skii-title{
+    margin-bottom: 36px;
+    font-size: 24px;
+}
+
+.skill-text{
+    flex-grow: 1;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.skill-text::after{
+    content: "";
+    display: inline-block;
+    border: 2px solid #eeeeee;
+    margin-top: 24px;
+    width: 120%;
+
+}
+
+.skill-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 68px;
+}
+
+.sold-out{
+    font-size: 14px;
+}
+
+.more-people{
+    font-size: 14px;
+}
+
+.more-pic{
+    display: flex;
+    flex-direction: row;
+}
+
+.more-pic li{
+    border-radius: 50%;
+    border: 3px solid white;
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    margin-left: -10px;
+}
+
+.more-pic li img{
+    width: 30px;
+    height: 30px;
+
+}
+
+
+/* 퍼플해드 부분 */
+.section_purple .top-text h1{
+    width: 26%;
+}
+
+.section_purple .top-text span{
+    box-shadow: inset 0 -20px 0 orangered;
+}
+
+.section_purple .top-text h1::after{
+    content: '';
+    display: block;
+    width: 100px;
+    position: absolute;
+    top: 50%;
+    left: 26.5%;
+    border: 0.5px solid #bd8fe8;
+}
+
+/* 중간 컨텐츠 시작 */
+.second-text{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+    gap: 24px;
+}
+
+.second-text article{
+    /* border: 1px solid green; */
+    display: flex;
+    flex-direction: row;   
+    position: relative;    
+}
+
+.second-text article .second-imgbox{
+    flex-basis: 26%;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.second-imgbox img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.second-imgbox p{
+    position: absolute;
+    background-color: rgb( 0 0 0 / .4 );
+    inset: 0; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 30px;
+}
+
+.second-text article:nth-child(2n){
+    display: flex;
+    flex-direction: row-reverse;    
+}
+
+/* 박스 텍스트 부분 */
+.card-info{
+    padding: 24px;
+    background: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-info h3{
+    font-size: 18px;
+    font-weight: 600;
+    color: black;    
+    margin-bottom: 20px;
+}
+
+.card-info .text-list {
+    font-size: 14px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    text-indent: -20px; 
+}
+
+.card-info > .text-list li {
+    position: relative;
+    font-size: 14px;
+}
+
+.card-info ul li:not(:first-child){
+    margin-top: 20px;
+}
+
+.card-info ul li::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: #bd8fe8;
+    margin-left: 24px;    
+    
+}
+
